@@ -1,29 +1,45 @@
 /*selektor znacznika*/
+/*
 p{
     font-size: 18px;
     color: blue ;
     background-color: yellow ;
 }
+*/
 
 /*selektor identyfikatora*/
 #selektory p{
     background-color: lightgreen ;
 }
 /*selektor klasy*/
-.example p{
-    font-size: 36px
+#example_id p{
+    font-size: 50px ;
 }
+
+.example p{
+    font-size: 36px ;
+}
+
+
+
 /*Łączenie selektorów*/
 h1, h2, h3 {
     color:red;
 }
 
+/*bezpośredni potomek*/
 .direct > p
 {
     background-color: grey ;
 }
 
-/*selektor blliskiego rdzeństwa*/
+p+a {
+    color: green;
+    font-size: 40px ;
+}
+
+
+/*selektor bliskiego rodzeństwa*/
 h1+h2{
     font-size: 40px;
 }
@@ -33,4 +49,22 @@ h1+h2{
 
 .wykluczajacy p:not(.not){
     background-color: gray ;
+}
+
+#nastepny ul li:nth-child(8),
+#nastepny ul li:nth-of-type(8)
+{
+   background-color: violet ;
+}
+
+#nastepny ul li:nth-child(odd){
+   background-color: red ;
+}
+
+#nastepny ul li:nth-child(3n+3){
+   background-color: green;
+}
+
+#nastepny ul li:nth-last-child(4n+2){
+   font-size: 28px ;
 }
